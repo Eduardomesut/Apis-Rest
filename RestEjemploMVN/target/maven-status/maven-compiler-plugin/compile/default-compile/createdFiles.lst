@@ -1,0 +1,3 @@
+com\nogal\rest\RestApp.class
+com\nogal\dao\User.class
+com\nogal\rest\UsersServices.class
