@@ -18,8 +18,8 @@ import java.util.HashMap;
 
 @Path("/users")
 public class UsersServices {
-    @Inject
-    private ObjetoCompartido obj;
+    
+    private static ObjetoCompartido obj = new ObjetoCompartido();
 
     @GET
     @Path("/voto/{name}/XML")
