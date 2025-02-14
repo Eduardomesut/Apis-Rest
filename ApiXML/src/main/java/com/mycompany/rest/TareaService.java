@@ -26,6 +26,7 @@ public class TareaService {
     @POST
     @Path("/tarea/addTarea")
     @Produces(MediaType.APPLICATION_XML)
+    @Consumes(MediaType.APPLICATION_XML)
     public Tarea addTarea(Tarea tarea) {
         this.tareas.add(tarea);
         return tarea;
@@ -41,12 +42,18 @@ public class TareaService {
     }
    
     @GET
-    @Path("/tareas")
+    @Path("/tareas/XML")
     @Produces(MediaType.APPLICATION_XML)
     public ArrayList<Tarea> mirarTareas() {
         return this.tareas;
     }
-    
-    
-    
+    //http://localhost:8080/ApiXML/resources/users/tareas/JSON
+    @GET
+    @Path("/tareas/JSON")
+    @Produces(MediaType.APPLICATION_JSON)
+    public ArrayList<Tarea> mirarTareasJson(){
+        
+        return this.tareas;
+    }
+
 }
